@@ -38,22 +38,22 @@
       </div>
       <div class="col-lg-4">
       <div class="card shadow">
-            <form action="./controller/UpdatePassword.php" method="POST">
-                <h3 class="card-header">Update Password</h3>
-                <div class="card-body">
-                    <input type="password" name="old_password" class="form-control my-2" placeholder="Enter old password">
-                    <span class="text-danger"><?= $_SESSION['errors']['old_password_error'] ?? null ?></span>
-                    <input type="password" name="new_password" class="form-control my-2" placeholder="Enter new password">
-                    <span class="text-danger"><?= $_SESSION['errors']['new_password_error'] ?? null ?></span>
-                    <input type="password" name="confirm_password" class="form-control my-2" placeholder="Confirm password">
-                    <span class="text-danger"><?= $_SESSION['errors']['confirm_password_error'] ?? null ?></span>
-                    <button class="btn btn-primary">Update Password</button>
-                </div>
-            </form>
-                
-            </div>
+      <form action="../controller/PasswordUpdate.php" method="POST" >
+         <div class="card-header d-flex justify-content-between align-items-center">
+            <h4>Password</h4>
+            <button class="btn btn-primary">Update Password</button>
+           </div>
+           <div class="card-body">
+               
+               <input type="text" name="oldPassword" class="form-control mb-2" placeholder="Old Password">
+               <span class="text-danger"><?= $_SESSION['errors']['old_error'] ?? null ?></span>
+               <input type="text" name="password" class="form-control mb-2" placeholder="New Password">
+               <span class="text-danger"><?= $_SESSION['errors']['password_error'] ?? null ?></span>
+               <input type="text" name="confirmPassword" class="form-control mb-2" placeholder="Confirm Password">
+           </div>
+       </div>
+        </form>
         </div>
-      </div>
 
 
       </div>
